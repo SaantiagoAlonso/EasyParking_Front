@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Perfil del Propietario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Contenedor principal -->
+  <div class="profile-container">
+    <!-- Sección de la foto de perfil y nombre -->
+    <div class="profile-header">
+      <ion-avatar class="profile-avatar">
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Foto de perfil" />
+      </ion-avatar>
+      <h2 class="profile-name">Juan Pérez</h2>
+      <p class="profile-email">juan.perez.com</p>
+    </div>
+
+    <!-- Detalles del propietario -->
+    <ion-card class="profile-details">
+      <ion-card-header>
+        <ion-card-title>Detalles del Propietario</ion-card-title>
+      </ion-card-header>
+
+      <ion-list lines="none">
+        <ion-item>
+          <ion-icon name="person-outline" slot="start" class="detail-icon"></ion-icon>
+          <ion-label>
+            <h3>Nombre</h3>
+            <p>Juan Pérez</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="mail-outline" slot="start" class="detail-icon"></ion-icon>
+          <ion-label>
+            <h3>Correo Electrónico</h3>
+            <p>juan.perez.com</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="call-outline" slot="start" class="detail-icon"></ion-icon>
+          <ion-label>
+            <h3>Teléfono</h3>
+            <p>+57 123 456 7890</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+    <!-- Detalles del vehículo -->
+    <ion-card class="vehicle-details">
+      <ion-card-header>
+        <ion-card-title>Detalles del Vehículo</ion-card-title>
+      </ion-card-header>
+
+      <ion-list lines="none">
+        <ion-item>
+          <ion-icon name="car-outline" slot="start" class="detail-icon"></ion-icon>
+          <ion-label>
+            <h3>Vehículo</h3>
+            <p>Toyota Corolla</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="pricetag-outline" slot="start" class="detail-icon"></ion-icon>
+          <ion-label>
+            <h3>Placa</h3>
+            <p>ABC123</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="color-palette-outline" slot="start" class="detail-icon"></ion-icon>
+          <ion-label>
+            <h3>Color</h3>
+            <p>Blanco</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>

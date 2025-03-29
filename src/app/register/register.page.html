@@ -1,0 +1,153 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+<!-- <app-header titulo="Registro"></app-header>
+
+<ion-content>
+  <form [formGroup]="formularioRegistro" (ngSubmit)="guardar()">
+    <div>
+      <ion-label>Nombre</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </div>
+    <div>
+      <ion-label>Correo</ion-label>
+      <ion-input formControlName="correo"></ion-input>
+    </div>
+
+    <ion-button type="submit">Registrate</ion-button>
+  </form>
+
+
+</ion-content> -->
+
+<!-- <app-header titulo="Registro"></app-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="formularioRegistro" (ngSubmit)="guardar()">
+    
+    <ion-item lines="full" class="input-item">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre" type="text" required></ion-input>
+    </ion-item>
+
+    
+    <ion-item lines="full" class="input-item">
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input formControlName="correo" type="email" required></ion-input>
+    </ion-item>
+
+   
+    <div class="button-container">
+      <ion-button type="submit" expand="block" color="primary" >
+        Regístrate
+      </ion-button>
+    </div>
+  </form>
+</ion-content> -->
+
+<!-- <app-header titulo="Registro"></app-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="formularioRegistro" (ngSubmit)="guardar()">
+    
+    <ion-item lines="full" class="input-item transparent">
+      <ion-icon name="person-outline" slot="start" class="input-icon"></ion-icon>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre" type="text"></ion-input>
+    </ion-item>
+    <div *ngIf="formularioRegistro.get('nombre')?.invalid && formularioRegistro.get('nombre')?.touched" class="error-message">
+      El nombre es obligatorio.
+    </div>
+
+    
+    <ion-item lines="full" class="input-item transparent">
+      <ion-icon name="mail-outline" slot="start" class="input-icon"></ion-icon>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input formControlName="correo" type="email"></ion-input>
+    </ion-item>
+    <div *ngIf="formularioRegistro.get('correo')?.invalid && formularioRegistro.get('correo')?.touched" class="error-message">
+      <span *ngIf="formularioRegistro.get('correo')?.errors?.['required']">El correo es obligatorio.</span>
+      <span *ngIf="formularioRegistro.get('correo')?.errors?.['email']">El correo no es válido.</span>
+    </div>
+
+    
+    <div class="button-container">
+      <ion-button type="submit" expand="block" color="primary" [disabled]="formularioRegistro.invalid">
+        Regístrate
+      </ion-button>
+    </div>
+  </form>
+</ion-content> -->
+
+<app-header titulo="Registro"></app-header>
+
+<ion-content class="ion-padding">
+  <div class="form-container">
+    <form [formGroup]="formularioRegistro" (ngSubmit)="guardar()">
+   
+      <!-- <ion-icon name="logo-google" slot="start" class="form-icon"></ion-icon>
+      <img src="assets/icon/easyParking.png" style="width: 50%;"> -->
+
+      
+      <ion-item lines="full" class="input-item transparent">
+        <ion-icon name="person-outline" slot="start" class="input-icon"></ion-icon>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="nombre" type="text"></ion-input>
+      </ion-item>
+      <div *ngIf="formularioRegistro.get('nombre')?.invalid && formularioRegistro.get('nombre')?.touched" class="error-message">
+        El nombre es obligatorio.
+      </div>
+
+      <ion-item lines="full" class="input-item transparent">
+        <ion-icon name="mail-outline" slot="start" class="input-icon"></ion-icon>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input formControlName="correo" type="email"></ion-input>
+      </ion-item>
+      <div *ngIf="formularioRegistro.get('correo')?.invalid && formularioRegistro.get('correo')?.touched" class="error-message">
+        <span *ngIf="formularioRegistro.get('correo')?.errors?.['required']">El correo es obligatorio.</span>
+        <span *ngIf="formularioRegistro.get('correo')?.errors?.['email']">El correo no es válido.</span>
+      </div>
+
+
+      <ion-item lines="full" class="input-item transparent">
+        <ion-icon name="build" slot="start" class="input-icon"></ion-icon>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="correo" type="email"></ion-input>
+      </ion-item>
+      <div *ngIf="formularioRegistro.get('correo')?.invalid && formularioRegistro.get('correo')?.touched" class="error-message">
+        <span *ngIf="formularioRegistro.get('correo')?.errors?.['required']">Este compo es obligatorio</span>
+        <span *ngIf="formularioRegistro.get('correo')?.errors?.['email']">El correo no es válido.</span>
+      </div>
+
+
+
+      <ion-item lines="full" class="input-item transparent">
+        <ion-icon name="car" slot="start" class="input-icon"></ion-icon>
+        <ion-label position="floating">Placa</ion-label>
+        <ion-input formControlName="correo" type="email"></ion-input>
+      </ion-item>
+      <div *ngIf="formularioRegistro.get('correo')?.invalid && formularioRegistro.get('correo')?.touched" class="error-message">
+        <span *ngIf="formularioRegistro.get('correo')?.errors?.['required']">Este compo es obligatorio</span>
+        <span *ngIf="formularioRegistro.get('correo')?.errors?.['email']">El correo no es válido.</span>
+      </div>
+
+
+  
+      <div class="button-container">
+        <ion-button type="submit" expand="block" color="primary" [disabled]="formularioRegistro.invalid">
+          Regístrate
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

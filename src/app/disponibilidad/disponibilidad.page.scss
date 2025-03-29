@@ -1,0 +1,46 @@
+/* Estilos generales */
+ion-content {
+    --background: #f8f9fa; /* Fondo claro */
+  }
+  
+  .spaces-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Espacio entre las cards */
+  }
+  
+  ion-card {
+    width: calc(50% - 8px); /* Dos cards por fila */
+    border-radius: 16px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  /* Estilo para lugares disponibles */
+  ion-card.available {
+    background: rgba(209, 250, 229, 0.8); /* Verde claro */
+  }
+  
+  /* Estilo para lugares ocupados */
+  ion-card.occupied {
+    background: rgba(253, 237, 237, 0.8); /* Rojo claro */
+  }
+  
+  ion-card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  ion-card-subtitle {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  ion-card-content p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #343a40;
+  }
+  
+  ion-button {
+    margin-top: 12px;
+  }

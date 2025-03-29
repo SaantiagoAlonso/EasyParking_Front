@@ -1,0 +1,22 @@
+[
+    {
+        "icon": "person-outline",
+        "name": "Pefil",
+        "redirectTo": "/perfil"
+    },
+    {
+        "icon": "happy-outline",
+        "name": "Detalles",
+        "redirectTo": "/detalle-parking"
+    },
+    {
+        "icon": "car-sharp",
+        "name": "Disponibilidad",
+        "redirectTo": "/disponibilidad"
+    },
+    {
+        "icon": "car-sport-sharp",
+        "name": "Action Sheet",
+        "redirectTo": "/action-sheet"
+    }
+]

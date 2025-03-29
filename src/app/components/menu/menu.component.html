@@ -1,0 +1,32 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+
+    <ion-list>
+      <ion-item *ngFor="let c of componentes |async"
+      [routerLink]="c.redirectTo" >
+        <ion-icon [name]="c.icon"  class="icon-class"></ion-icon>
+        <ion-label>{{ c.name }}</ion-label>
+
+      </ion-item>
+     
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> </ion-content>
+</div>

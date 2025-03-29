@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Lugares Disponibles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Contenedor principal -->
+  <div class="spaces-container">
+    <!-- Card para cada lugar del estacionamiento -->
+    <ion-card *ngFor="let space of parkingSpaces" [class.available]="space.available" [class.occupied]="!space.available">
+      <ion-card-header>
+        <ion-card-title>{{ space.name }}</ion-card-title>
+        <ion-card-subtitle>{{ space.available ? 'Disponible' : 'Ocupado' }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p><strong>Tipo:</strong> {{ space.type }}</p>
+        <p><strong>Vehículo:</strong> {{ space.vehicle || 'Ninguno' }}</p>
+        <p><strong>Placa:</strong> {{ space.plate || 'Ninguna' }}</p>
+      </ion-card-content>
+
+      <ion-button expand="block" fill="outline" [color]="space.available ? 'success' : 'danger'" [disabled]="!space.available">
+        {{ space.available ? 'Seleccionar' : 'No disponible' }}
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-content>

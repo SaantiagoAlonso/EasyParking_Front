@@ -1,0 +1,83 @@
+/* Estilos generales */
+ion-content {
+    --background: #f8f9fa; /* Fondo claro */
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px; /* Espacio entre las secciones */
+  }
+  
+  /* Sección de la foto de perfil y nombre */
+  .profile-header {
+    text-align: center;
+  }
+  
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+  }
+  
+  .profile-avatar img {
+    border-radius: 50%; /* Foto circular */
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 8px;
+  }
+  
+  .profile-email {
+    font-size: 16px;
+    color: #6c757d;
+  }
+  
+  /* Estilo de las cards */
+  ion-card {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+  }
+  
+  ion-card-header {
+    padding: 16px;
+  }
+  
+  ion-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  /* Estilo de los íconos */
+  .detail-icon {
+    font-size: 24px;
+    color: #6c757d;
+  }
+  
+  /* Estilo de los detalles */
+  ion-item {
+    --padding-start: 16px;
+    --inner-padding-end: 16px;
+    --inner-padding-top: 12px;
+    --inner-padding-bottom: 12px;
+  }
+  
+  ion-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 4px;
+  }
+  
+  ion-item p {
+    font-size: 14px;
+    color: #6c757d;
+  }
