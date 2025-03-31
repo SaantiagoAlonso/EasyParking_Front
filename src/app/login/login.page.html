@@ -1,53 +1,59 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Iniciar Sesión</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content class="ion-padding">
-  <!-- Contenedor principal -->
-  <div class="login-container">
-    <!-- Logo o imagen -->
-    <div class="logo-container">
-      <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Logo" class="logo" />
+<ion-content class="ion-padding auth-page">
+  <div class="form-container">
+    <!-- Logo del proyecto (descomenta cuando tengas el logo) -->
+    <div class="logo-wrapper">
+      <!-- <img src="assets/icon/easyParking.png" alt="EasyParking Logo" class="auth-logo"> -->
     </div>
 
-    <!-- Formulario de inicio de sesión -->
     <form [formGroup]="loginForm" (ngSubmit)="login()">
-      <!-- Campo de correo electrónico -->
-      <ion-item lines="full" class="input-item transparent">
+      <!-- Campo Email -->
+      <ion-item lines="none" class="input-item">
         <ion-icon name="mail-outline" slot="start" class="input-icon"></ion-icon>
-        <ion-input formControlName="email" type="email" placeholder="Correo Electrónico"></ion-input>
+        <ion-input
+          formControlName="email"
+          type="email"
+          placeholder="Correo electrónico"
+          class="input-custom"
+          [class.invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        </ion-input>
       </ion-item>
-      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error-message">
-        El correo es obligatorio y debe ser válido.
+      <div class="error-message" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        <ion-icon name="alert-circle-outline"></ion-icon>
+        <span *ngIf="loginForm.get('email')?.errors?.['required']">El correo es obligatorio.</span>
+        <span *ngIf="loginForm.get('email')?.errors?.['email']">Ingresa un correo válido.</span>
       </div>
 
-      <!-- Campo de contraseña -->
-      <ion-item lines="full" class="input-item transparent">
+      <!-- Campo Contraseña -->
+      <ion-item lines="none" class="input-item">
         <ion-icon name="lock-closed-outline" slot="start" class="input-icon"></ion-icon>
-        <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+        <ion-input
+          formControlName="password"
+          type="password"
+          placeholder="Contraseña"
+          class="input-custom"
+          [class.invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        </ion-input>
       </ion-item>
-      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error-message">
-        La contraseña es obligatoria y debe tener al menos 6 caracteres.
+      <div class="error-message" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <ion-icon name="alert-circle-outline"></ion-icon>
+        La contraseña es obligatoria
       </div>
 
-      <!-- Botón de inicio de sesión -->
-      <div class="button-container">
-        <ion-button type="submit" expand="block" color="primary" [disabled]="loginForm.invalid">
-          Iniciar Sesión
-        </ion-button>
-      </div>
+      <!-- Botón de Inicio de Sesión -->
+      <ion-button
+        type="submit"
+        expand="block"
+        shape="round"
+        class="submit-button"
+        [disabled]="loginForm.invalid">
+        <ion-icon name="log-in-outline" slot="start"></ion-icon>
+        Ingresar
+      </ion-button>
 
-      <!-- Enlace para recuperar contraseña -->
-      <div class="forgot-password">
-        <a href="#">¿Olvidaste tu contraseña?</a>
+      <!-- Enlace a Registro -->
+      <div class="auth-footer">
+        <p>¿No tienes cuenta? <a [routerLink]="['/register']">Regístrate</a></p>
       </div>
     </form>
-
-    <!-- Opción para registrarse -->
-    <div class="signup-option">
-      <p>¿No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
-    </div>
   </div>
 </ion-content>

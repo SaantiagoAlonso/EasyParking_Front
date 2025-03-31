@@ -15,7 +15,9 @@ export class RegisterPage implements OnInit {
 
   formularioRegistro = new FormGroup({
     nombre: new FormControl('',[Validators.required]),
-    correo: new FormControl('',[Validators.required,Validators.email])
+    correo: new FormControl('',[Validators.required,Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    placa: new FormControl('', [Validators.required])
   })
 
   constructor(private userService: ApiService) { }
@@ -44,10 +46,10 @@ export class RegisterPage implements OnInit {
         console.error('Error al registrar usuario:', error);
       }
     });
-  
+
 
     console.log(this.formularioRegistro.value)
-    
+
 
   }
 

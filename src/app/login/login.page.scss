@@ -1,110 +1,86 @@
-/* Estilos generales */
-ion-content {
-    --background: linear-gradient(to bottom, #f3f4f6, #ffffff); /* Degradado suave */
+.auth-page {
+  --ion-background-color: #f8f9fa;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo-wrapper {
+  text-align: center;
+  margin: 20px 0 30px;
+
+  .auth-logo {
+    height: 80px;
+    width: auto;
   }
-  
-  .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Centrar verticalmente */
-    gap: 24px; /* Espacio entre elementos */
-  }
-  
-  /* Logo */
-  .logo-container {
-    margin-bottom: 24px;
-  }
-  
-  .logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Imagen circular */
-    object-fit: cover; /* Ajusta la imagen al contenedor */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  }
-  
-  /* Inputs */
-  .input-item {
-    margin-bottom: 16px;
-    border-radius: 30px;
-    --background: rgba(255, 255, 255, 0.8); /* Transparencia */
-    --border-color: #e5e7eb;
-    --border-width: 1px;
-    --border-style: solid;
-    --padding-start: 12px;
-    --padding-end: 12px;
-    --inner-padding-top: 8px;
-    --inner-padding-bottom: 8px;
-    --height: 48px; /* Reduce la altura de los inputs */
-  }
-  
+}
+
+.input-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  margin-bottom: 5px;
+
   .input-icon {
-    color: #9ca3af; /* Color del ícono */
-    font-size: 20px;
-    margin-right: 8px;
-  }
-  
-  .error-message {
-    color: #dc2626; /* Rojo para errores */
-    font-size: 14px;
-    margin-top: 4px;
-    margin-left: 16px;
-  }
-  
-  /* Botón */
-  .button-container {
-    margin-top: 24px;
-  }
-  
-  ion-button {
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    border-radius: 24px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  ion-button[disabled] {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-  
-  /* Enlace para recuperar contraseña */
-  .forgot-password {
-    margin-top: 16px;
-    text-align: center;
-  }
-  
-  .forgot-password a {
-    color: #3b82f6; /* Azul para enlaces */
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  .forgot-password a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Opción para registrarse */
-  .signup-option {
-    margin-top: 24px;
-    text-align: center;
-  }
-  
-  .signup-option p {
-    font-size: 14px;
     color: #6c757d;
+    margin-right: 10px;
+    font-size: 1.2rem;
   }
-  
-  .signup-option a {
-    color: #3b82f6; /* Azul para enlaces */
-    font-weight: bold;
+}
+
+.input-custom {
+  --padding-start: 10px !important;
+  --padding-top: 15px !important;
+  --padding-bottom: 15px !important;
+  background: #f1f3f5;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-size: 0.95rem;
+
+  &.invalid {
+    border-left: 3px solid var(--ion-color-danger);
+  }
+}
+
+.error-message {
+  color: var(--ion-color-danger);
+  font-size: 0.8rem;
+  margin: 0 0 15px 15px;
+  display: flex;
+  align-items: center;
+
+  ion-icon {
+    margin-right: 5px;
+    font-size: 1rem;
+  }
+}
+
+.submit-button {
+  margin: 25px 0 15px;
+  --box-shadow: none;
+  height: 48px;
+  font-weight: 500;
+
+  ion-icon {
+    font-size: 1.2rem;
+  }
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 0.9rem;
+
+  a {
+    color: var(--ion-color-primary);
     text-decoration: none;
+    font-weight: 500;
   }
-  
-  .signup-option a:hover {
-    text-decoration: underline;
-  }
+}
